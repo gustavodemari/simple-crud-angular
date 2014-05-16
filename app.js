@@ -10,6 +10,7 @@
     this.createUser = function(){
       if(this.newUser){
         this.newUser.id = this.users.length+1;
+        this.newUser.createdOn = Date.now();
         this.users.push(this.newUser);
         this.newUser = {};
       }
@@ -40,12 +41,14 @@
     {
       id: 1,
       name: 'Gustavo De Mari Pereira',
-      email: 'guta302@hotmail.com'
+      email: 'guta302@hotmail.com',
+      createdOn: Date.now()-100000
     },
     {
       id: 2,
       name: 'Jose da Silva',
-      email: 'josesilva@hotmail.com'
+      email: 'josesilva@hotmail.com',
+      createdOn: Date.now()
     },
   ];
 })()

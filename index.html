@@ -7,6 +7,9 @@
       .ng-invalid.ng-dirty {
         border-color: #FA787E;
       }
+      .ng-valid.ng-dirty {
+        border-color: green;
+      }
     </style>
   </head>
   <body>
@@ -25,6 +28,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Creation Date</th>
               </tr>
             </thead>
             <tbody>
@@ -32,6 +36,7 @@
                 <td>{{user.id}}</td>
                 <td>{{user.name}}</td>
                 <td>{{user.email}}</td>
+                <td>{{user.createdOn | date : 'dd/MM/yyyy HH:mm:ss'}}</td>
               </tr>
             </tbody>
           </table>
@@ -57,9 +62,6 @@
               <div class="col-md-offset-1 col-md-4">
                 <button class="btn btn-default" type="submit">Register</submit>
               </div>
-            </div>
-            <div>
-              form is {{userRegistrationForm.$valid}}
             </div>
           </form>
         </div>
