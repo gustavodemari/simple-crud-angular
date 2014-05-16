@@ -5,10 +5,13 @@
   app.controller("UserController", function(){
     //init users
     this.users = usersList;
+    this.newUser = {};
 
-    this.createUser = function(newUser){
-      if(newUser){
-        this.users.push(newUser);
+    this.createUser = function(){
+      if(this.newUser){
+        this.newUser.id = this.users.length+1;
+        this.users.push(this.newUser);
+        this.newUser = {};
       }
     }
 
@@ -21,10 +24,6 @@
         }
       }
     }
-  });
-
-  app.controller("UserRegistrationController", function(){
-    this.newUser = {};
   });
 
   app.controller("TableController", function(){
