@@ -11,6 +11,16 @@
         this.users.push(newUser);
       }
     }
+
+    this.updateUser = function(userUpdated){
+      if(userUpdated){
+        for (var i = 0; i < this.users.length; i++){
+          if(this.users[i].id === userUpdated.id){
+            this.users[i] = userUpdate;
+          }
+        }
+      }
+    }
   });
 
   var usersList = [
