@@ -11,7 +11,7 @@
           <h1>Users</h1>
           <div class="row">
             <div class="col-md-4">
-              <input type="search" class="form-control" placeholder="Search">
+              <input type="search" class="form-control" placeholder="Search" ng-model="searchText">
             </div>
           </div>          
           <table class="table" ng-controller="tableController as table">
@@ -23,7 +23,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="user in user.users" ng-click="table.setActiveRow(user.id)" ng-class="{ active: table.getActiveRow(user.id) }">
+              <tr ng-repeat="user in user.users | filter : searchText" ng-click="table.setActiveRow(user.id)" ng-class="{ active: table.getActiveRow(user.id) }">
                 <td>{{user.id}}</td>
                 <td>{{user.name}}</td>
                 <td>{{user.email}}</td>
