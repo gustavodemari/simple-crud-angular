@@ -18,6 +18,11 @@
       id: 1,
       name: 'Gustavo De Mari Pereira',
       email: 'guta302@hotmail.com'
-    }
+    },
+    {
+      id: 2,
+      name: 'Jose da Silva',
+      email: 'josesilva@hotmail.com'
+    },
   ];
 })()
