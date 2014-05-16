@@ -2,7 +2,7 @@
   //loading modules
   var app = angular.module('crud', []);
 
-  app.controller("userController", function(){
+  app.controller("UserController", function(){
     //init users
     this.users = usersList;
 
@@ -23,9 +23,11 @@
     }
   });
 
-  app.controller("tableController", function(){
-    var selectedUser;
+  app.controller("UserRegistrationController", function(){
+    this.newUser = {};
+  });
 
+  app.controller("TableController", function(){
     this.setActiveRow = function(userId){
       this.selectedUser = userId;
     }
