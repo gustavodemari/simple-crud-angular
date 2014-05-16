@@ -28,7 +28,6 @@
 
     this.setActiveRow = function(userId){
       this.selectedUser = userId;
-      console.log(this.selectedUser);
     }
 
     this.getActiveRow = function(userId){
