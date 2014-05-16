@@ -23,6 +23,12 @@
     }
   });
 
+  app.controller("tableController", function(){
+    this.setActiveRow = function(userId){
+      this.selectedUser = userId;
+    }
+  });
+
   var usersList = [
     {
       id: 1,
