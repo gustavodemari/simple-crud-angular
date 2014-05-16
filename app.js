@@ -13,5 +13,11 @@
     }
   });
 
-  usersList = [];
+  usersList = [
+    {
+      id: 1,
+      name: 'Gustavo De Mari Pereira',
+      email: 'guta302@hotmail.com'
+    }
+  ];
 })()
