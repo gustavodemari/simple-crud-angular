@@ -27,11 +27,13 @@
     };
 
     this.removeUser = function(user){
-      if(user){
-        this.users.splice(user.id-1, 1);
+      if(confirm('Are you sure you want to delete?')){
+        if(user){
+          this.users.splice(user.id-1, 1);
+        }
       }
     };
-    
+
   });
 
   app.controller("TableController", function(){
