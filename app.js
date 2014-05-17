@@ -26,10 +26,11 @@
       }
     };
 
-    this.removeUser = function(user){
+    this.removeUser = function(userId){
       if(confirm('Are you sure you want to delete?')){
-        if(user){
-          this.users.splice(user.id-1, 1);
+        console.log(userId);
+        if(userId){
+          this.users.splice(userId-1, 1);
         }
       }
     };
@@ -51,13 +52,19 @@
       id: 1,
       name: 'Gustavo De Mari Pereira',
       email: 'guta302@hotmail.com',
-      createdOn: Date.now()-100000
+      createdOn: Date.now()-1000*100000
     },
     {
       id: 2,
       name: 'Jose da Silva',
       email: 'josesilva@hotmail.com',
-      createdOn: Date.now()
+      createdOn: Date.now()-100000
     },
+    {
+      id: 3,
+      name: 'Silvio Santos',
+      email: 'silvio@sbt.com.br',
+      createdOn: Date.now()
+    }
   ];
 })()
