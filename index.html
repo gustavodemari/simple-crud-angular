@@ -16,7 +16,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12" ng-controller="UserController as userCtrl">
-          <h1>Users</h1>
+          <h2>Users</h2>
           <div class="row">
             <div class="col-md-4">
               <input type="search" class="form-control" placeholder="Search" ng-model="searchText">
@@ -37,14 +37,18 @@
                 <td>{{user.name}}</td>
                 <td>{{user.email}}</td>
                 <td>{{user.createdOn | date : 'dd/MM/yyyy HH:mm:ss'}}</td>
+                <td><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-edit"></span></button>
+                <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
+      <hr>
       <div class="row">
         <div class="col-md-12">
-          <h1>Users registration</h1>
+          <h2>Users registration</h2>
           <form name="userRegistrationForm" class="form-horizontal" role="form" ng-controller="UserController as userCtrl" ng-submit="userRegistrationForm.$valid && userCtrl.createUser()" novalidate>
             <div class="form-group">
               <label class="col-md-1 control-label" for="name">Name</label>
@@ -64,6 +68,12 @@
               </div>
             </div>
           </form>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Users edit</h2>
         </div>
       </div>
     </div>
