@@ -14,7 +14,7 @@
         this.users.push(this.newUser);
         this.newUser = {};
       }
-    }
+    };
 
     this.updateUser = function(userUpdated){
       if(userUpdated){
@@ -24,7 +24,14 @@
           }
         }
       }
-    }
+    };
+
+    this.removeUser = function(user){
+      if(user){
+        this.users.splice(user.id-1, 1);
+      }
+    };
+    
   });
 
   app.controller("TableController", function(){
